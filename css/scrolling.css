@@ -1,0 +1,91 @@
+
+header {
+	padding: 7rem 1rem 3rem;
+}
+
+section {
+	padding: 2rem 1rem 2rem;
+}
+
+footer {
+	padding: 2rem 1rem 4rem;
+	background-color: #343a40;
+}
+
+.list-group-item {
+	background-color: #343a40;
+}
+
+.card-header {
+	color: #9dced4;
+	text-transform: uppercase;
+	font-family:'Raleway', sans-serif;
+	font-weight: lighter;
+}
+
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
+
+
+/* styles for small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+	header {
+		padding: 9rem 4rem 5rem;
+	}
+
+	section {
+		padding: 7rem 4rem 8rem;
+	}
+
+    #mapsection {padding-left: 20px;
+            padding-top: 20px;}
+
+	footer {
+		padding: 3rem 6rem 2rem;
+		background-color: #777;
+	}
+}
+
+/* styles for medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	header {
+		padding: 8rem 7rem 6rem;
+	}
+
+	section {
+		padding: 6rem 7rem 8rem;
+	}
+
+    #mapsection {padding-left: 20px;
+            padding-top: 20px;}
+
+	footer {
+		padding: 3rem 6rem 2rem;
+		background-color: #777;
+	}
+}
+
+
+.nav-pills .nav-link.active {
+	color: #fff;
+	background-color: rgba(200, 200, 200, 0.4);
+}
+
+.dk-color {
+	background-color: #ccc;
+}
+
+.lt-color {
+	background-color: #cecece;
+}
+
+.md-color {
+	background-color: #9dced4;
+}

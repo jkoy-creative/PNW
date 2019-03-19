@@ -1,0 +1,131 @@
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;*/
+
+
+
+p, h6, h4 {font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {font-family: 'Source Sans Pro', sans-serif;}
+
+.lighttext{font-style: italic;
+          font-size: 12px;
+          opacity:0.5; }
+
+.navbar {font-family: 'Raleway', sans-serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 1px;}
+
+
+
+.navbar-nav .nav-link{padding-left:10px; }
+
+#map {height: 400px;}
+
+#fullwidthillustration{padding-left: 0px;
+                        margin-left: 0px;
+                        background-image: url('../img/HeaderIllustrationTemp-01.png');
+                        width:100%;
+                        background-repeat: no-repeat;
+                        background-size:cover;
+                        position:relative;
+                        height:400px;
+                  }
+
+.tipstitle{
+    color: #fff;
+    display: block;
+}
+
+.card {
+          margin: 0 auto; /* Added */
+    }
+
+.hidden {
+		display: none;
+	}
+
+.dropdown {margin-bottom: 20px;}
+
+.btn {font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight:bolder;
+    }
+
+#mapsection {
+          margin-top:10px;
+}
+
+.card-img-top {padding: 10px;}
+
+h2{font-family: 'Raleway', sans-serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 1px;}
+
+h4{font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight:bolder;
+      }
+
+.card-text {font-size: 14px;
+          font-weight: lighter;}
+
+@media (min-width: 768px){
+    #mapsection {
+        /* padding-left: 20px; */
+        padding-top: 20px;
+    }
+    section {
+        padding: 2rem 4rem;
+    }
+    #map {
+        display: block;
+    }
+}
+
+@media (min-width: 576px){
+    #mapsection {
+        /* padding-left: 20px; */
+        padding-top: 20px;
+    }
+    .section {
+        padding: 7rem 4rem 7rem;
+    }
+    #map {
+      display: block;
+    }
+}
+
+@media (max-width: 768px){
+#fullwidthillustration{
+    height: 400px;
+  }
+.col-md-8{padding-top:20px;}
+}
+
+@media (max-width: 576px){
+#fullwidthillustration{
+    height: 200px;
+    margin-top:20px;
+  }
+}
+
+@media (max-width: 522px) {
+  .card-deck !important {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      }
+
+}
+
+@media (max-width: 522px) {
+  .card{min-width:200px;}
+}

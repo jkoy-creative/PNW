@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Scrolling Template</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Mapbox JS -->
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/myStyle.css">
+	<link rel="stylesheet" href="css/scrolling.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200|Source+Sans+Pro:300" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+	<!-- navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
+		<div class="container-fluid">
+
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">PNW</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse collapse" id="navbarResponsive" style="">
+				<ul class="navbar-nav nav-pills ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#page-top">The Pacific Northwest</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#description">Why PNW</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#mapsection">Maps</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#traveltips">Travel Tips</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- header image-->
+	<header class="dk-color" id="fullwidthillustration">
+		<div class="container-fluid">
+			<div class="row">
+			</div>
+		</div>
+	</header>
+
+	<!-- about -->
+	<section id="description" class="lt-color">
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-md-12 mx-auto">
+					<h2 class="huge">Why the Pacific Northwest</h2>
+					<p class="lead">Cascadia, mostly known as the Pacfifc Northwest lies between the Pacific Ocean on the West and the loose boundary of the Cascade Range to the East. The PNW comprises of active volcanoes, coastal forrests, beaches and mountains in both the US and British Columbia, passing the US border.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- map -->
+	<section id="mapsection">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div id="map"></div>
+				</div>
+				<div class="col-md-8">
+					<h2>The Pacific Northwest</h2>
+					<p class="lead">Learn about different parks within the PNW.</p>
+					<div class="dropdown">
+						<button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a Park</button>
+						<div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<button id="btn1" class="dropdown-item" type="button">Denali</button>
+							<button id="btn2" class="dropdown-item" type="button">Glacier Bay</button>
+							<button id="btn3" class="dropdown-item" type="button">North Cascades</button>
+							<button id="btn4" class="dropdown-item" type="button">Mt Rainier</button>
+							<button id="btn5" class="dropdown-item" type="button">Crater Lake</button>
+							<button id="btn6" class="dropdown-item" type="button">Redwood</button>
+							<button id="btn7" class="dropdown-item" type="button">Lassen</button>
+							<button id="btn8" class="dropdown-item" type="button">Grand Teton</button>
+							<button id="btn9" class="dropdown-item" type="button">Yellowstone</button>
+							<button id="btn10" class="dropdown-item" type="button">Glacier National</button>
+						</div>
+					</div>
+					<div id='c1' class='locs hidden'>
+						<h4>Denali</h4>
+						<h6><b>State:</b> Alaska</h6>
+						<h6><b>Peak Season:</b> May-Mid September</h6>
+						<h6><b>Area in Square Miles:</b> 9492</h6>
+						<h6 class="lighttext"><b>Also see:</b> Wonder Lake, Mount Foraker, Kahiltna Glacier, Ruth Glacier, Mount Hunter, Muldrow Glacier, Horseshoe Lake, Savage Lake, Teklanika River, Thorofare Pass and Mount McKinley. </h6>
+					</div>
+					<div id='c2' class='locs hidden'>
+						<h4>Glacier Bay</h4>
+						<h6><b>State:</b> Alaska</h6>
+						<h6><b>Peak Season:</b>May-July</h6>
+						<h6><b>Area in Square Miles:</b> 5130</h6>
+						<h6 class="lighttext"><b>Also see:</b> Margerie Glacer, Mount Fairweather, Tarr Inlet, John Hopkins Glacier, lamplugh Glacier, Grand Pacific Glacier, Bartlet Cove, Glacier Bat, Reid Glacier, Muir Glacier, Chilkat Range, Beardslee Islands, Takhinsha Mountains and Dry Bay. </h6>
+					</div>
+					<div id='c3' class='locs hidden'>
+						<h4>North Cascades</h4>
+						<h6><b>State:</b> Washington</h6>
+						<h6><b>Peak Season:</b>Mid June and Late September</h6>
+						<h6><b>Area in Square Miles:</b> 789</h6>
+						<h6 class="lighttext"><b>Also see:</b> Diablo Lake, Mt. Baker Ski Area, Mount Baker-Snoqualmie National Forest, Ross Lake, Mount Shuksan, Washington Pass, Cascade Pass, Maple Pass, Aritst Point, Sahale Mountain, Hidden Lake, Forbidden Peak, Desolation Peak, Eldorado Peak, Thornton Lakes, Hennegan Pass, Black Peak and Snoqualmie Falls. </h6>
+					</div>
+					<div id='c4' class='locs hidden'>
+						<h4>Mt Rainier</h4>
+						<h6><b>State:</b> Washington</h6>
+						<h6><b>Peak Season:</b>July-August</h6>
+						<h6><b>Area in Square Miles:</b> 369.3</h6>
+						<h6 class="lighttext"><b>Also see:</b> Mount Fremont, Tipss Lake Loop, Skyline Trail, Wonderland Trail, Patriarchs Trail, Reflection Lakes, Narada Falls, Comet Falls, Paradise Valley, Crystal Mountain, Snow Lake, Mowich Lake, Longmire, Sunrise Area, Carbon River and Ohanapecosh Hot Springs.</h6>
+					</div>
+					<div id='c5' class='locs hidden'>
+						<h4>Crater Lake National Park</h4>
+						<h6><b>State:</b> Oregon</h6>
+						<h6><b>Peak Season:</b>July-September</h6>
+						<h6><b>Area in Square Miles:</b> 20.6</h6>
+						<h6 class="lighttext"><b>Also see:</b> Crater Lake, WIzard Island, Rim Drive, Mount Mazama, Phantom Ship, Mount Thielsen, Mount Scott, Cleetwood Cove, Garfield Peak, Mount Bailey, Discovery Point and Watchman Peak. </h6>
+					</div>
+					<div id='c6' class='locs hidden'>
+						<h4>Redwood National and State Parks</h4>
+						<h6><b>State:</b> California</h6>
+						<h6><b>Peak Season:</b>June-September</h6>
+						<h6><b>Area in Square Miles:</b> 172</h6>
+						<h6 class="lighttext"><b>Also see:</b> Jedediah Smith, Prairie Creek, Trees of Mystery, Fern Canyon, Del Norte Coast, Batter Point Lighthouse, Lady Bird Johnson Grove Trail, Gold Bluffs, Redwood Creek, Humboldt Lagoons and Big Lagoon. </h6>
+					</div>
+					<div id='c7' class='locs hidden'>
+						<h4>Lassen Volcanic National Park</h4>
+						<h6><b>State:</b> California</h6>
+						<h6><b>Peak Season:</b>mid-July-early August</h6>
+						<h6><b>Area in Square Miles:</b> 166</h6>
+						<h6 class="lighttext"><b>Also see:</b> Lassen Peak, Manzanita Lake, Cinder Cone, MOunt Tehama, Lake Helen, Butte Lake, SUmmit Lake, Kings Creek Falls, Chaos Crags, Juniper Lake and Snag Lake. </h6>
+					</div>
+					<div id='c8' class='locs hidden'>
+						<h4>Grand Teton National Park</h4>
+						<h6><b>State:</b> Wyoming</h6>
+						<h6><b>Peak Season:</b>September-Mid October</h6>
+						<h6><b>Area in Square Miles:</b> 485</h6>
+						<h6 class="lighttext"><b>Also see:</b> Jenny Lake, Jackson Hole, Jackson Lake, Cascade Canyon, Hidden Falls, Signal Mountain, Strong Lake, Taggart Lake and Schwabacher Landing.</h6>
+					</div>
+					<div id='c9' class='locs hidden'>
+						<h4>Yellowstone National Park</h4>
+						<h6><b>State:</b> Wyoming</h6>
+						<h6><b>Peak Season:</b>April to May, September and November</h6>
+						<h6><b>Area in Square Miles:</b> 3500</h6>
+						<h6 class="lighttext"><b>Also see:</b> Old Faithful, Yellowstone River, Yellowstone Caldera, Grand Prismatic Sprint, Yellowstone Lake, Grand Canyon of the Yellowstone, Firehole River, Tower Fall, Hayden Valley, West Thumb, Norris Geyser and Washburn Hot Springs.</h6>
+					</div>
+					<div id='c10' class='locs hidden'>
+						<h4>Glacier National Park</h4>
+						<h6><b>State:</b> Montana</h6>
+						<h6><b>Peak Season:</b>July-August</h6>
+						<h6><b>Area in Square Miles:</b> 1,583</h6>
+						<h6 class="lighttext"><b>Also see:</b> Going-to-the-Sun Road, Lake McDonald, Logan Pass, Highline Trail, Hidden Lake, St Mary Lake, Swiftcurrent Lake, Grinnell Glacier, Avalance Lake, Iceberg Lake and Two Medicine.</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- tips -->
+	<section id="traveltips" class="md-color">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class='tipstitle huge'>Travel Tips</h2>
+				</div>
+				<div class="col-md-8">
+					<div class="card border-dark bg-dark text-white mb-3">
+						<div class="card-body col-md-12">
+							<h4>Check park website and check in with park rangers.</h4>
+							<p class="card-text">The website and rangers know insider information on closures, weather updates and the best trails.</p>
+						</div>
+					</div>
+
+					<div class="card border-dark bg-dark text-white mb-3">
+						<div class="card-body col-md-12">
+							<h4>Hike with a friend.</h4>
+							<p class="card-text">Hiking with a sidekick helps you stay safe and accounted for.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card bg-dark text-white mb-3 col-md-12">
+  					<div class="card-header">
+    					Packing List
+  					</div>
+  					<ul class="list-group list-group-flush">
+							<li class="list-group-item">Bear Spray</li>
+    					<li class="list-group-item">Extra Socks</li>
+    					<li class="list-group-item">Water Bottle</li>
+							<li class="list-group-item">First Aid Kit</li>
+							<li class="list-group-item">Compass</li>
+  					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-md-12 mx-auto">
+					<p class="text-white">© 2017 Jessica Koynock. All rights reserved.</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- Custom js for this theme -->
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/scrolling.js"></script>
+
+	<!--mapbox JS -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+
+	<!--Custom Script for Map Section -->
+	<script>
+	//TOKEN
+	mapboxgl.accessToken = 'pk.eyJ1IjoiamtveSIsImEiOiJjamVpcm9mdTcwcXZuMndubGc2eW5lOGMxIn0.LqVYBT6knHYg0uRU07HfGQ';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/light-v9',
+		center: [-119.7606406, 46.2645807],
+		zoom: 3
+	});
+	// activate the buttons to fly to locations
+
+	var popup = new mapboxgl.Popup({
+		closeButton: false,
+		closeOnClick: false
+	});
+
+	var icons = [
+		//Denali
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Horseshoe Lake Trail",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-148.91034, 63.73882]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Savage River",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-149.29169, 63.74132]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Teklanika River",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-149.5783, 63.69818]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Thorofare Pass",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-150.26249, 63.43777]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Denali Peak",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-151.00698, 63.06916]
+			}
+		},
+
+		//Glacier Bay
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Bartlett Cove",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-135.91666, 58.45]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Dry Bay",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-138.52999, 59.12915]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Margerie Glacier",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-137.17583, 58.96777]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Mount Fairweather",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-137.5413, 58.9108]
+			}
+		},
+
+		//North Cascades
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Diablo Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.1133, 48.71215]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Snoqualmie Falls",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.8377, 47.54172]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Maple Pass",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-120.76639, 48.5005]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Ross Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.06394, 48.86811]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Sahale Mountain",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.039, 48.49123]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Mount Shuksan",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.60291, 48.83095]
+			}
+		},
+		//Mt Rainier
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Longmire",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.81277, 46.75024]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Paradise",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.73497, 46.78531]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Ohanapecosh Hot Springs",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.56258, 46.73761]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Sunrise Visitor Center",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.64349, 46.91445]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Carbon River",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.91594, 46.995]
+			}
+		},
+		//Crater Lake
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Wizard Island",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-122.14922, 42.93948]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Cleetwood Cove",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-122.0782, 42.97529]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Watchman Overlook",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-122.16888, 42.94592]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Discovery Point",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-122.15126, 42.91392]
+			}
+		},
+		//Redwood
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Prairie Creek Redwoods State Park",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.02988, 41.40342]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Del Norte Coast Redwoods State Park",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.11567, 41.67294]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Trees of Mystery",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.08678, 41.58399]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Gold Bluffs Beach",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.06969, 41.3788]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Jedediah Smith Redwood State Park",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.10468, 41.7955]
+			}
+		},
+		//Lassen
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Lassen Peak",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.50493, 40.48807]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Manzanita Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.56734, 40.53268]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Lake Helen",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.5106, 40.46803]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Butte Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.29139, 40.56465]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Kings Creek Falls",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.44108, 40.45932]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Juniper Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-121.31126, 40.45154]
+			}
+		},
+		//Grand Teton
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Jenny Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.73165, 43.76138]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Taggart Lake Trailhead",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.73287, 43.69315]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Jackson Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.67491, 43.89283]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Jackson Hole",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.70542, 43.61225]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Schwabachers Landing Road",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.67147, 43.7052]
+			}
+		},
+		//Yellowstone
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Hayden Valley",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.45548, 44.64382]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Old Faithful Geyser",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.82813, 44.46047]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "West Thumb Geyser Basin Trail",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.57194, 44.41673]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Norris Geyser Basin",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.70428, 44.72623]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Yellowstone Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.3333, 44.46222]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Washburn Hot Springs",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-110.42964, 44.76604]
+			}
+		},
+		//Glacier National
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Lake McDonald",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-113.92557, 48.58317]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Logan Pass",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-113.71816, 48.69664]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "North Fork Flathead River",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-114.26772, 48.73909]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Saint Mary",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-113.42954, 48.74386]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Two Medicine Lake",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-113.38681, 48.47668]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"symbol": "marker",
+				"label": "Going-to-the-Sun Road",
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-113.86433, 48.62821]
+			}
+		},
+	];
+
+
+
+	map.on('load', function() {
+		map.addLayer({
+			"id": "symbols",
+			"type": "symbol",
+			"source": {
+				"type": "geojson",
+				"data": {
+					"type": "FeatureCollection",
+					"features": icons,
+				}
+			},
+			"layout": {
+				"icon-image": "{symbol}-15",
+				"icon-size": 1,
+				"icon-allow-overlap": true,
+				"icon-ignore-placement": true,
+				// "text-field": "{label}",
+				"text-offset": [0, 1],
+				"text-anchor": "top",
+				"text-allow-overlap": true,
+				"text-ignore-placement": true
+			}
+		});
+
+
+		// center the map on the coordinates of any clicked symbol from the 'symbols' layer.
+		map.on('click', 'symbols', function(e) {
+			// map.flyTo({ center: e.features[0].geometry.coordinates });
+			console.log(e.features[0].properties.label + ': ' + e.features[0].properties.info);
+		});
+
+		// change the cursor to a pointer when the it enters a feature in the 'symbols' layer.
+		map.on('mousemove', 'symbols', function(e) {
+			map.getCanvas().style.cursor = 'pointer';
+			var coordinates = e.features[0].geometry.coordinates.slice();
+			var label = e.features[0].properties.label;
+			console.log(coordinates);
+
+			// Populate the popup and set its coordinates
+			// based on the feature found.
+			popup.setLngLat(coordinates)
+			.setHTML(label)
+			.addTo(map);
+		});
+
+		// change it back to a pointer when it leaves.
+		map.on('mouseleave', 'symbols', function() {
+			map.getCanvas().style.cursor = '';
+		});
+
+		// map.on('mouseenter', 'places', function(e) {
+		// 	// Change the cursor style as a UI indicator.
+		// 	map.getCanvas().style.cursor = 'pointer';
+		//
+		// 	var coordinates = e.features[0].geometry.coordinates.slice();
+		// 	var description = e.features[0].properties.label;
+		// 	console.log(coordinates);
+		//
+		// 	// Ensure that if the map is zoomed out such that multiple
+		// 	// copies of the feature are visible, the popup appears
+		// 	// over the copy being pointed to.
+		// 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+		// 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+		// 	}
+		//
+		// 	// Populate the popup and set its coordinates
+		// 	// based on the feature found.
+		// 	popup.setLngLat(coordinates)
+		// 	.setHTML(label)
+		// 	.addTo(map);
+		// });
+		//
+		//
+		// map.on('mouseleave', 'places', function() {
+		// 	map.getCanvas().style.cursor = '';
+		// 	popup.remove();
+		// });
+
+
+	});
+
+
+	//Denali
+	$('#btn1').click(function() {
+		map.flyTo({
+			center: [-150.19259, 63.1148],
+			zoom: 6,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c1').removeClass('hidden');
+
+	});
+
+	//Glacier Bay
+	$('#btn2').click(function() {
+		map.flyTo({
+			center: [-136.90021, 58.6658],
+			zoom: 6,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c2').removeClass('hidden');
+	});
+
+	//North Cascades
+	$('#btn3').click(function() {
+		map.flyTo({
+			center: [-121.29846, 48.77181],
+			zoom: 6,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c3').removeClass('hidden');
+	});
+
+	//Mt Rainier
+	$('#btn4').click(function() {
+		map.flyTo({
+			center: [-121.7269, 46.87996],
+			zoom: 8,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c4').removeClass('hidden');
+	});
+
+	//Crater Lake
+	$('#btn5').click(function() {
+		map.flyTo({
+			center: [-122.10847, 42.89000],
+			zoom: 10,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c5').removeClass('hidden');
+	});
+
+	//Redwood
+	$('#btn6').click(function() {
+		map.flyTo({
+			center: [-124.0964763339843, 41.49576753340601],
+			zoom: 8.5,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c6').removeClass('hidden');
+	});
+
+	//Lassen
+	$('#btn7').click(function() {
+		map.flyTo({
+			center: [-121.42065, 40.49766],
+			zoom: 8,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c7').removeClass('hidden');
+	});
+
+	//Grand Teton
+	$('#btn8').click(function() {
+		map.flyTo({
+			center: [-110.68176, 43.79042],
+			zoom: 8,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c8').removeClass('hidden');
+	});
+
+	//Yellowstone
+	$('#btn9').click(function() {
+		map.flyTo({
+			center: [-110.58845, 44.42796],
+			zoom: 8,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c9').removeClass('hidden');
+	});
+
+	//Glacier National
+	$('#btn10').click(function() {
+		map.flyTo({
+			center: [-113.78702, 48.75961],
+			zoom: 8,
+		});
+		// content
+		$('.locs').addClass('hidden');
+		$('#c10').removeClass('hidden');
+	});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
